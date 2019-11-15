@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="758.0" minWidth="1366.0" prefHeight="758.0" prefWidth="1366.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccueilMedecin">
+   <children>
+      <JFXTabPane layoutX="148.0" layoutY="180.0" prefHeight="399.0" prefWidth="897.0" style="-fx-border-color: #26afea;">
+         <tabs>
+            <Tab text="Dossiers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="370.0" layoutY="131.0" onMouseClicked="#dossier" prefHeight="81.0" prefWidth="275.0" styleClass="authentification" text="Dossier Patient">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Consultations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="406.0" layoutY="128.0" onMouseClicked="#consultation" prefHeight="81.0" prefWidth="275.0" styleClass="authentification" text="Gestion Consultations">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Rendez-Vous">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="406.0" layoutY="128.0" onMouseClicked="#rendervous" prefHeight="81.0" prefWidth="265.0" styleClass="authentification" text="Gestions Rendez-Vous">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Hospitalisations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="323.0" layoutY="105.0" onAction="#hospitalisation" prefHeight="81.0" prefWidth="303.0" styleClass="authentification" text="Gestion Hospitatlisations">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Vaccinations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="406.0" layoutY="128.0" onMouseClicked="#vaccination" prefHeight="81.0" prefWidth="307.0" styleClass="authentification" text="Gestion des Vaccinations">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Pane prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fx:id="cerccle" fill="DODGERBLUE" layoutX="1006.0" layoutY="41.0" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="22.0" onMouseClicked="#deconnecter" prefHeight="42.0" prefWidth="141.0" styleClass="authentification" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="prenomlabel" layoutX="1089.0" layoutY="24.0" text="Docteur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1106.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Medecin" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

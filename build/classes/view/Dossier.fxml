@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="2311.0" prefWidth="1367.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Dossier">
+   <children>
+      <Circle fx:id="cercle" fill="DODGERBLUE" layoutX="58.0" layoutY="138.0" onMouseClicked="#back" radius="31.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Pane layoutX="14.0" layoutY="201.0" prefHeight="467.0" prefWidth="232.0" styleClass="menucomp">
+         <children>
+            <JFXTextField fx:id="champstbx" focusColor="#1fe4c3" layoutX="14.0" layoutY="22.0" onKeyReleased="#releasematricule" prefHeight="27.0" prefWidth="199.0" unFocusColor="#2d97e8" />
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="199.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1491442103_icon-111-search.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table" layoutX="-7.0" layoutY="59.0" onMouseClicked="#selectionner" prefHeight="432.0" prefWidth="253.0" style="-fx-border-radius: 20;">
+              <columns>
+                <TableColumn fx:id="matcl" prefWidth="87.99996948242188" text="Mat" />
+                <TableColumn fx:id="nomcl" prefWidth="74.0" text="Nom" />
+                  <TableColumn fx:id="prenomcl" prefWidth="76.99996948242188" text="Prenom" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="283.0" layoutY="125.0" prefHeight="153.0" prefWidth="911.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="5.0" layoutY="21.0" prefHeight="111.0" prefWidth="216.0" style="-fx-border-color: #3dd374; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" text="Consultations" />
+                  <ImageView fitHeight="42.0" fitWidth="62.0" layoutX="139.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/IMG_0062.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nconsultation" layoutX="62.0" layoutY="45.0" prefHeight="28.0" prefWidth="55.0" textFill="#12c9ab">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="679.0" layoutY="21.0" prefHeight="111.0" prefWidth="224.0" style="-fx-border-color: #3dd374; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" text="Hospitalisations" />
+                  <ImageView fitHeight="42.0" fitWidth="55.0" layoutX="175.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/unnamed_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nhospitalisation" layoutX="95.0" layoutY="56.0" textFill="#12c9ab">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="227.0" layoutY="21.0" prefHeight="111.0" prefWidth="216.0" style="-fx-border-color: #3dd374; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <Label layoutY="5.0" text="Vaccins" />
+                  <ImageView fitHeight="42.0" fitWidth="62.0" layoutX="154.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/1600.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nvaccin" layoutX="75.0" layoutY="56.0" textFill="#12c9ab">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="449.0" layoutY="21.0" prefHeight="111.0" prefWidth="224.0" style="-fx-border-color: #3dd374; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" text="Rendez-Vous" />
+                  <ImageView fitHeight="42.0" fitWidth="62.0" layoutX="162.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/time.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nrendervous" layoutX="78.0" layoutY="56.0" textFill="#12c9ab">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="panegraph" fx:id="panegraph" layoutX="447.0" layoutY="295.0" prefHeight="347.0" prefWidth="745.0">
+         <children>
+            <LineChart fx:id="linechart" alternativeColumnFillVisible="true" horizontalZeroLineVisible="false" layoutX="33.0" layoutY="-2.0" prefHeight="338.0" prefWidth="672.0" style="-fx-background-color: white;" title="Evolution  medicale du patient" verticalZeroLineVisible="false">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Pane fx:id="preview" layoutX="38.0" layoutY="4.0" prefHeight="347.0" prefWidth="659.0" styleClass="lineareacc" visible="false">
+               <children>
+                  <Label fx:id="photopreview" layoutX="211.0" layoutY="41.0" prefHeight="42.0" prefWidth="42.0" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <GridPane layoutX="524.0" layoutY="653.0" prefHeight="30.0" prefWidth="619.0" style="-fx-background-color: white;">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="photo1" onMouseEntered="#preview1" onMouseExited="#hidepreview1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="photo2" onMouseEntered="#preview2" onMouseExited="#hidepreview2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="photo3" onMouseEntered="#preview3" onMouseExited="#hidepreview3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="692.0" layoutY="671.0" prefHeight="20.0" prefWidth="284.0" text="Documents">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="289.0" layoutY="268.0" prefHeight="426.0" prefWidth="200.0" style="-fx-border-color: #3dd374; -fx-border-radius: 20;" styleClass="menucomp">
+         <children>
+            <Label fx:id="myphoto" layoutX="36.0" layoutY="30.0" prefHeight="20.0" prefWidth="20.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="131.0" text="Nom :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="172.0" text="Prenom :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="250.0" text="Adresse :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="289.0" text="Telephone :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="335.0" text="E-Mail :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="214.0" text="Date Nais :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomlb" layoutX="63.0" layoutY="131.0" prefHeight="20.0" prefWidth="118.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="prenomlb" layoutX="82.0" layoutY="172.0" prefHeight="20.0" prefWidth="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="naissancelb" layoutX="92.0" layoutY="214.0" prefHeight="20.0" prefWidth="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="adresselb" layoutX="90.0" layoutY="250.0" prefHeight="20.0" prefWidth="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="telephonelb" layoutX="96.0" layoutY="289.0" prefHeight="20.0" prefWidth="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="maillb" layoutX="77.0" layoutY="335.0" prefHeight="20.0" prefWidth="112.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fx:id="cerccle" fill="DODGERBLUE" layoutX="1006.0" layoutY="41.0" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="22.0" onMouseClicked="#deconnecter" prefHeight="42.0" prefWidth="141.0" styleClass="authentification" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="1089.0" layoutY="24.0" text="Docteur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="namme" layoutX="1089.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Administrateur" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="1208.0" layoutY="145.0" prefHeight="553.0" prefWidth="156.0" style="-fx-background-radius: 20; -fx-border-radius: 25; -fx-border-color: #3dd374;;" styleClass="menucomp">
+         <children>
+            <Pane layoutY="338.0" prefHeight="125.0" prefWidth="156.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Pane layoutX="12.0" layoutY="45.0" prefHeight="47.0" prefWidth="132.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="VaccinA" layoutX="38.0" layoutY="15.0" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#222222b5" />
+                     </effect>
+                  </Pane>
+                  <Label layoutX="18.0" layoutY="4.0" prefHeight="20.0" prefWidth="138.0" text="Vaccinations Recentes">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="1214.0" layoutY="151.0" prefHeight="125.0" prefWidth="156.0" style="-fx-border-radius: 20;">
+         <children>
+            <Pane layoutX="12.0" layoutY="49.0" prefHeight="47.0" prefWidth="132.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="consultationA" layoutX="38.0" layoutY="15.0" />
+               </children>
+               <effect>
+                  <DropShadow color="#222222b5" />
+               </effect>
+            </Pane>
+            <Label layoutX="11.0" layoutY="7.0" prefHeight="20.0" prefWidth="132.0" text="Constations Recentes">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="1215.0" layoutY="314.0" prefHeight="125.0" prefWidth="156.0" style="-fx-border-radius: 20;">
+         <children>
+            <Pane layoutX="12.0" layoutY="49.0" prefHeight="47.0" prefWidth="132.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="rendervousA" layoutX="38.0" layoutY="15.0" />
+               </children>
+               <effect>
+                  <DropShadow color="#222222b5" />
+               </effect>
+            </Pane>
+            <Label layoutX="12.0" layoutY="7.0" prefHeight="20.0" prefWidth="132.0" text="Render Vous Recentes">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

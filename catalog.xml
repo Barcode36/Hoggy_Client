@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:53268/WelcomeWCFService.svc" uri="xml-resources/web-service-references/WelcomeWCFService/wsdl/localhost_53268/WelcomeWCFService.svc.xml"/>
+    <system systemId="http://localhost:53268/WelcomeWCFService.svc?wsdl" uri="xml-resources/web-service-references/WelcomeWCFService/wsdl/localhost_53268/WelcomeWCFService.svc.wsdl"/>
+    <system systemId="http://localhost:53268/WelcomeWCFService.svc?xsd=xsd0" uri="xml-resources/web-service-references/WelcomeWCFService/wsdl/localhost_53268/WelcomeWCFService.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:53268/WelcomeWCFService.svc?xsd=xsd1" uri="xml-resources/web-service-references/WelcomeWCFService/wsdl/localhost_53268/WelcomeWCFService.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://localhost:53268/WelcomeWCFService.svc?xsd=xsd2" uri="xml-resources/web-service-references/WelcomeWCFService/wsdl/localhost_53268/WelcomeWCFService.svc.xsd_xsd2.xsd"/>
+</catalog>

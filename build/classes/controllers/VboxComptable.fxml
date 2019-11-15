@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.Pane?>
+<?import jfxtras.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="244.0" style="-fx-background-color: white;" stylesheets="@../view/style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VboxComptable">
+   <children>
+      <Pane prefHeight="445.0" prefWidth="244.0">
+         <children>
+            <Pane prefHeight="442.0" prefWidth="244.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXButton layoutX="23.0" layoutY="25.0" onAction="#accueil" prefHeight="50.0" prefWidth="180.0" style="-fx-border-color: #3dd374;; -fx-border-radius: 10;" styleClass="hovtab" text="Accueil" />
+                  <JFXButton layoutX="23.0" layoutY="94.0" onAction="#listeConsultation" prefHeight="50.0" prefWidth="180.0" style="-fx-border-color: #3dd374;; -fx-border-radius: 10;" styleClass="hovtab" text="Consultations" />
+                  <JFXButton layoutX="23.0" layoutY="166.0" onAction="#listeHospitalisation" prefHeight="50.0" prefWidth="180.0" style="-fx-border-color: #3dd374;; -fx-border-radius: 10;" styleClass="hovtab" text="Hospitalisations" />
+                  <JFXButton layoutX="23.0" layoutY="233.0" onAction="#listeVaccination" prefHeight="50.0" prefWidth="180.0" style="-fx-border-color: #3dd374;; -fx-border-radius: 10;" styleClass="hovtab" text="Vaccinations" />
+                  <JFXButton layoutX="23.0" layoutY="307.0" onAction="#listeRenderVous" prefHeight="50.0" prefWidth="180.0" style="-fx-border-color: #3dd374;; -fx-border-radius: 10;" styleClass="hovtab" text="Rendez-Vous" />
+                  <JFXButton layoutX="23.0" layoutY="371.0" onAction="#demande" prefHeight="50.0" prefWidth="180.0" styleClass="lineartabbis" text="Demande Rendez-Vous" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

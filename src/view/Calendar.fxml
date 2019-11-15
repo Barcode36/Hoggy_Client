@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDatePicker?>
+
+<AnchorPane id="AnchorPane" minHeight="758.0" minWidth="1366.0" prefHeight="758.0" prefWidth="1366.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Calendar">
+   <children>
+      <Pane layoutX="169.0" layoutY="122.0" minHeight="64.0" minWidth="24.0" prefHeight="150.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="338.0" layoutX="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/patient-educator%20-%20Copie%20(2).jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="21.0" layoutY="14.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#07c958">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="110.0" text="Patients" textFill="#07c958">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="546.0" layoutY="122.0" minHeight="64.0" minWidth="24.0" prefHeight="150.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="330.0" layoutX="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/o-PREVENTIVE-SCREENING-RECOMMENDATIONS-facebook.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="28.0" layoutY="21.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#ff9d00">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutX="2.0" layoutY="110.0" text="Consultations" textFill="#ff9d00">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="911.0" layoutY="122.0" minHeight="64.0" minWidth="24.0" prefHeight="150.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="330.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/syringe-vaccination.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="24.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#eee715">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutY="110.0" text="Vaccinations" textFill="#eee715">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="169.0" layoutY="304.0" minHeight="64.0" minWidth="24.0" prefHeight="150.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="330.0" layoutX="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/Check-formulaire.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="14.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#16c9ff">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutY="110.0" text="Rendez-Vous" textFill="#16c9ff">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="546.0" layoutY="300.0" minHeight="64.0" minWidth="24.0" prefHeight="158.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="158.0" fitWidth="330.0" layoutX="1.0" layoutY="-4.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/syringe-vaccination.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#a40e3e">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="116.0" text="Doctors" textFill="#a40e3e">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="911.0" layoutY="300.0" minHeight="64.0" minWidth="24.0" prefHeight="150.0" prefWidth="330.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="330.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/a585e3_f3f45621a5fc418aa642fe691a5dcd4c-mv2%20-%20Copie.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="21.0" prefHeight="68.0" prefWidth="82.0" text="25" textFill="#ff0e0e">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Label layoutY="110.0" text="Infirmiers" textFill="#ff0e0e">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="934.0" layoutY="486.0" prefHeight="204.0" prefWidth="362.0" style="-fx-background-color: silver;">
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="362.0" style="-fx-background-color: white;" text="Evenement" textFill="#2d9ccc">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="35.0" prefHeight="42.0" prefWidth="357.0" style="-fx-background-color: white;" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#807b7b" />
+               </effect></Label>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="94.0" prefHeight="50.0" prefWidth="357.0" style="-fx-background-color: white;" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#807b7b" />
+               </effect></Label>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="156.0" prefHeight="42.0" prefWidth="357.0" style="-fx-background-color: white;" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#807b7b" />
+               </effect></Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fill="DODGERBLUE" layoutX="1030.0" layoutY="43.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="31.0" prefHeight="42.0" prefWidth="141.0" styleClass="linear" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#424546" />
+               </effect>
+            </Label>
+            <Label layoutX="1067.0" layoutY="24.0" text="Dr Monsieur Malick Diop">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1079.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Specialiste en O.R.L" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <LocalDatePicker fx:id="date" layoutX="169.0" layoutY="486.0" prefHeight="224.0" prefWidth="727.0" stylesheets="@style.css" />
+      <Circle fx:id="cercle" fill="DODGERBLUE" layoutX="45.0" layoutY="153.0" onMouseClicked="#back" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

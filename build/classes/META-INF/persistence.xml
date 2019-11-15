@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="GogoPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>jpaModel.Specialite</class>
+    <class>jpaModel.Comptable</class>
+    <class>jpaModel.Medecin</class>
+    <class>jpaModel.Patient</class>
+    <class>jpaModel.Sexe</class>
+    <class>jpaModel.Administrateur</class>
+    <class>jpaModel.Profil</class>
+    <class>jpaModel.Infirmier</class>
+    <class>jpaModel.Etat</class>
+    <class>jpaModel.Mecanicien</class>
+    <class>jpaModel.Secretaire</class>
+    <class>jpaModel.Validite</class>
+    <class>jpaModel.Ticket</class>
+    <class>jpaModel.Observation</class>
+    <class>jpaModel.Historique</class>
+    <class>jpaModel.Consultation</class>
+    <class>jpaModel.Allergie</class>
+    <class>jpaModel.Consultations</class>
+    <class>jpaModel.Ordonnance</class>
+    <class>jpaModel.RendezVous</class>
+    <class>jpaModel.Vaccinations</class>
+    <class>jpaModel.Simplevaccination</class>
+    <class>jpaModel.Carnet</class>
+    <class>jpaModel.Secretaire_1</class>
+    <class>jpaModel.Ordonnance_1</class>
+    <class>jpaModel.Infirmier_1</class>
+    <class>jpaModel.Consultations_1</class>
+    <class>jpaModel.Sexe_1</class>
+    <class>jpaModel.Patient_1</class>
+    <class>jpaModel.Administrateur_1</class>
+    <class>jpaModel.Validite_1</class>
+    <class>jpaModel.Historique_1</class>
+    <class>jpaModel.Allergie_1</class>
+    <class>jpaModel.Mecanicien_1</class>
+    <class>jpaModel.Specialite_1</class>
+    <class>jpaModel.Vaccinations_1</class>
+    <class>jpaModel.RendezVous_1</class>
+    <class>jpaModel.Medecin_1</class>
+    <class>jpaModel.Etat_1</class>
+    <class>jpaModel.Ticket_1</class>
+    <class>jpaModel.Simplevaccination_1</class>
+    <class>jpaModel.Carnet_1</class>
+    <class>jpaModel.Observation_1</class>
+    <class>jpaModel.Comptable_1</class>
+    <class>jpaModel.Profil_1</class>
+    <class>jpaModel.Chambre</class>
+    <class>jpaModel.Typech</class>
+    <class>jpaModel.Webadmin</class>
+    <class>jpaModel.Contact</class>
+    <class>jpaModel.ConsultationWeb</class>
+    <class>jpaModel.DemandeRv</class>
+    <class>jpaModel.RenderVousWeb</class>
+    <class>jpaModel.OrdonnanceWeb</class>
+    <class>jpaModel.Hospitalisation</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ryzen?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

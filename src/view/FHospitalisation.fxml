@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="758.0" prefWidth="2735.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FHospitalisation">
+   <children>
+      <Circle fx:id="cercle" fill="DODGERBLUE" layoutX="70.0" layoutY="159.0" onMouseClicked="#back" radius="31.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Pane fx:id="pane" layoutX="1940.0" layoutY="121.0" prefHeight="533.0" prefWidth="510.0" style="-fx-background-color: white; -fx-border-color: #1abc9c; -fx-border-radius: 40;">
+         <children>
+            <Label layoutX="29.0" layoutY="81.0" prefHeight="25.0" prefWidth="205.0" text="REPUBLIQUE DU SENEGAL">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="107.0" text="Un Peuple-Un But-Une Foi" />
+            <Label layoutX="31.0" layoutY="126.0" text="MINISTERE DE LA SANTE DE L'ACTION SOCIALE">
+               <font>
+                  <Font name="System Bold" size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="142.0" prefHeight="17.0" prefWidth="235.0" text="CENTRE HOSPITALIERE DE GRAND-YOFF" />
+            <Label layoutX="259.0" layoutY="83.0" prefHeight="19.0" prefWidth="269.0" text="CENTRE HOSPITALIERE DE GRAND YOFF">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="105.0" prefHeight="17.0" prefWidth="213.0" text="GRAND YOFF RUE X*Y :DAKAR-SENEGAL">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="333.0" layoutY="122.0" prefHeight="17.0" prefWidth="92.0" text="www.hoggy.sn" />
+            <Label layoutX="267.0" layoutY="141.0" prefHeight="17.0" prefWidth="243.0" text="TEL :+221 33 869 40 50 / +221 33 827 17 34" />
+            <ImageView fitHeight="62.0" fitWidth="250.0" layoutX="259.0" layoutY="4.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/sante.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="140.0" layoutX="45.0" layoutY="5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/senegal.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="511.0" prefHeight="17.0" prefWidth="235.0" text="A conserver par le patient ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="192.0" layoutY="286.0" text="Nom :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="284.0" text="Prenom :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="344.0" text="Adresse :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="408.0" text="Telephone :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="473.0" text="Date de Naissance :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="230.0" text="Matricule :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="344.0" text="Autorisate par :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="186.0" layoutY="408.0" text="NumChambre :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="472.0" text="Date Hospitalisation :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nompatient" layoutX="243.0" layoutY="286.0" text="Label" />
+            <Label fx:id="prenompatient" layoutX="108.0" layoutY="284.0" text="Label" />
+            <Label fx:id="adressepatient" layoutX="100.0" layoutY="345.0" text="Label" />
+            <Label fx:id="telephonepatient" layoutX="114.0" layoutY="409.0" text="Label" />
+            <Label fx:id="naissancepatient" layoutX="171.0" layoutY="473.0" text="Label" />
+            <Label fx:id="numeroautho" layoutX="293.0" layoutY="345.0" text="Label" />
+            <Label fx:id="numerochambre" layoutX="293.0" layoutY="410.0" text="Label" />
+            <Label fx:id="dateentree" layoutX="365.0" layoutY="473.0" text="Label" />
+            <Label fx:id="matriculetbx" layoutX="243.0" layoutY="230.0" text="Label" />
+            <Label fx:id="Photopatient" layoutX="58.0" layoutY="183.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="panelistepatient" layoutX="150.0" layoutY="100.0" prefHeight="516.0" prefWidth="1159.0">
+         <children>
+            <JFXTextField fx:id="champstbx" focusColor="#19e058" layoutX="265.0" layoutY="88.0" prefHeight="25.0" prefWidth="311.0" promptText="Rechercher" unFocusColor="#159fe4" />
+            <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="584.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1491442103_icon-111-search.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="163.0" layoutY="476.0" onAction="#continuer1" prefHeight="40.0" prefWidth="140.0" styleClass="authentification" text="Continuer" />
+            <TableView fx:id="tablepatient" layoutX="24.0" layoutY="133.0" onMouseClicked="#selectionnerpatient" prefHeight="285.0" prefWidth="1065.0">
+               <columns>
+                  <TableColumn fx:id="matcl" prefWidth="114.0" text="Matricule" />
+                  <TableColumn fx:id="nomcl" prefWidth="126.0" text="Nom" />
+                  <TableColumn fx:id="prenomcl" prefWidth="149.0" text="Prenom" />
+                  <TableColumn fx:id="adressecl" minWidth="0.0" prefWidth="102.0" text="Adresse" />
+                  <TableColumn fx:id="naissancecl" prefWidth="140.0" text="Date Naissance" />
+                  <TableColumn fx:id="consultationcl" minWidth="0.0" prefWidth="114.0" text="Date Consultation" />
+                  <TableColumn fx:id="Telephonecl" prefWidth="164.0" text="Telephone" />
+                  <TableColumn fx:id="doccl" prefWidth="151.0" text="Docteur" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="panechambre" layoutX="2000.0" layoutY="100.0" prefHeight="550.0" prefWidth="800.0" visible="false">
+         <children>
+            <TableView fx:id="table" layoutX="35.0" layoutY="109.0" onMouseClicked="#selectionner" prefHeight="320.0" prefWidth="624.0">
+               <columns>
+                  <TableColumn fx:id="matriculecl" prefWidth="150.0" text="Matricule" />
+                  <TableColumn fx:id="typecl" prefWidth="169.0" text="Type" />
+                  <TableColumn fx:id="superficiecl" prefWidth="152.0" text="Superficie" />
+                  <TableColumn fx:id="capacitecl" prefWidth="144.0" text="Capacite" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="recherchertbx" focusColor="#19e058" layoutX="81.0" layoutY="62.0" onKeyReleased="#releasematriculechambre" prefHeight="25.0" prefWidth="420.0" promptText="Rechercher" unFocusColor="#159fe4" />
+            <JFXCheckBox fx:id="priveescbx" layoutX="512.0" layoutY="45.0" onAction="#privees" text="Privees" />
+            <JFXCheckBox fx:id="communescbx" layoutX="511.0" layoutY="76.0" onAction="#communes" text="Communes" />
+            <JFXButton layoutX="315.0" layoutY="500.0" onAction="#continuer2" prefHeight="40.0" prefWidth="205.0" styleClass="authentification" text="Continuer" />
+            <JFXCheckBox fx:id="toutescbx" layoutX="511.0" layoutY="14.0" onAction="#toutes" text="Toutes" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="1.0" prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fx:id="cerccle" fill="DODGERBLUE" layoutX="1006.0" layoutY="41.0" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="22.0" onMouseClicked="#deconnecter" prefHeight="42.0" prefWidth="141.0" styleClass="authentification" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="prenomlabel" layoutX="1053.0" layoutY="22.0" text="Docteur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1106.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Comptable" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <JFXButton fx:id="imprimer" layoutX="349.0" layoutY="661.0" onAction="#printhos" prefHeight="17.0" prefWidth="140.0" styleClass="authentification" text="Imprimer" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

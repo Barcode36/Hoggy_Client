@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="813.0" stylesheets="@../controllers/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.chat">
+   <children>
+      <ImageView fitHeight="628.0" fitWidth="824.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Internet-Server-Network.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="serveurtbx" focusColor="#01ee24" layoutX="98.0" layoutY="34.0" prefHeight="25.0" prefWidth="106.0" promptText="Serveur" style="-fx-background-color: white;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="pseudotbx" focusColor="#01ee24" layoutX="98.0" layoutY="83.0" prefHeight="25.0" prefWidth="154.0" promptText="Pseudo" style="-fx-background-color: white;" unFocusColor="WHITE" />
+      <JFXListView fx:id="ecrantbx" layoutX="98.0" layoutY="167.0" opacity="0.84" prefHeight="348.0" prefWidth="531.0" />
+      <JFXButton fx:id="connexiontbx" layoutX="347.0" layoutY="71.0" onAction="#connecter" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #01ee24;" text="CONNEXION" textFill="WHITE" />
+      <Label layoutX="646.0" layoutY="146.0" text="Personne Connectees">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#01ee24" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXListView fx:id="usertbx" layoutX="639.0" layoutY="167.0" opacity="0.8" prefHeight="348.0" prefWidth="172.0" />
+      <JFXButton layoutX="613.0" layoutY="515.0" onAction="#send" />
+      <Pane layoutX="96.0" layoutY="534.0" prefHeight="60.0" prefWidth="693.0" style="-fx-background-color: white;">
+         <children>
+            <JFXButton fx:id="envoyertbx" layoutX="544.0" layoutY="11.0" onAction="#send" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #01ee24;" text="Envoyer" textFill="WHITE" />
+            <JFXTextArea fx:id="messagetbx" focusColor="#01ee24" layoutX="31.0" layoutY="11.0" prefHeight="38.0" prefWidth="497.0" unFocusColor="WHITE" />
+         </children>
+      </Pane>
+      <JFXButton layoutX="652.0" layoutY="63.0" onAction="#accueil" prefHeight="25.0" prefWidth="106.0" styleClass="authentification" text="ACCUEIL" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="1329.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccueilComptable">
+   <children>
+      <Pane layoutX="99.0" layoutY="127.0" prefHeight="577.0" prefWidth="1355.0">
+         <children>
+            <Pane layoutX="59.0" layoutY="293.0" onMouseClicked="#vaccination" prefHeight="180.0" prefWidth="313.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="168.0" layoutX="94.0" layoutY="22.0" onMouseClicked="#vaccination" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/Vaccination-PNG-Photo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="463.0" layoutY="298.0" prefHeight="180.0" prefWidth="295.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="156.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/11.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="846.0" layoutY="301.0" onMousePressed="#sta" prefHeight="180.0" prefWidth="295.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="168.0" layoutX="64.0" layoutY="9.0" onMousePressed="#sta" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/icone-comptabilite.png" />
+                     </image>
+                     <effect>
+                        <Reflection topOpacity="0.19" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="266.0" onMouseClicked="#vaccination" prefHeight="25.0" prefWidth="287.0" styleClass="lineartab" stylesheets="@style.css" text="Vaccination" />
+            <Label alignment="CENTER" layoutX="472.0" layoutY="271.0" prefHeight="25.0" prefWidth="278.0" styleClass="lineartab" stylesheets="@style.css" text="Emploi Du Temps" />
+            <Label alignment="CENTER" layoutX="869.0" layoutY="273.0" onMousePressed="#sta" prefHeight="25.0" prefWidth="260.0" styleClass="lineartab" stylesheets="@style.css" text="Statistiques" />
+            <Pane layoutX="59.0" layoutY="60.0" onMouseClicked="#consultation" prefHeight="180.0" prefWidth="330.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="138.0" fitWidth="156.0" layoutX="101.0" layoutY="8.0" onMouseClicked="#consultation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/IMG_0062.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="463.0" layoutY="61.0" onMouseClicked="#hospitalisation" prefHeight="180.0" prefWidth="295.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="147.0" layoutX="93.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/unnamed_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="846.0" layoutY="64.0" onMouseClicked="#rendervous" prefHeight="180.0" prefWidth="295.0" style="-fx-border-color: green; -fx-border-radius: 20;" styleClass="menucomp">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="168.0" layoutX="80.0" layoutY="11.0" onMouseClicked="#rendervous" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/time.png" />
+                     </image>
+                     <effect>
+                        <Reflection topOpacity="0.19" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="81.0" layoutY="33.0" onMouseClicked="#consultation" prefHeight="25.0" prefWidth="287.0" styleClass="lineartab" stylesheets="@style.css" text="Consultation" />
+            <Label alignment="CENTER" layoutX="473.0" layoutY="34.0" prefHeight="25.0" prefWidth="278.0" styleClass="lineartab" stylesheets="@style.css" text="Hospitalisation" />
+            <Label alignment="CENTER" layoutX="867.0" layoutY="37.0" onMouseClicked="#rendervous" prefHeight="25.0" prefWidth="260.0" styleClass="lineartab" stylesheets="@style.css" text="Rendez-Vous" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="1.0" prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fx:id="cerccle" fill="DODGERBLUE" layoutX="1006.0" layoutY="41.0" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="22.0" onMouseClicked="#deconnecter" prefHeight="42.0" prefWidth="141.0" styleClass="authentification" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="prenomlabel" layoutX="1053.0" layoutY="22.0" text="Docteur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1053.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Comptable" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

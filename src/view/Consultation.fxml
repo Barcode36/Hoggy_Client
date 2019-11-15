@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="2516.0" prefWidth="1428.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Consultation">
+   <children>
+      <Circle fx:id="cercle" fill="DODGERBLUE" layoutX="58.0" layoutY="138.0" onMouseClicked="#back" radius="31.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <ScrollPane fx:id="sp" fitToWidth="true" layoutX="244.0" layoutY="292.0" prefHeight="488.0" prefWidth="1130.0" style="-fx-background-color: white;">
+         <content>
+            <Pane fx:id="pane" prefHeight="2470.0" prefWidth="1166.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTabPane layoutX="25.0" layoutY="166.0" prefHeight="295.0" prefWidth="1055.0">
+                     <tabs>
+                        <Tab text="Examen Physique">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1044.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXSlider fx:id="poidslider" layoutX="87.0" layoutY="32.0" max="300.0" onMouseClicked="#sliderValuePoid" orientation="VERTICAL" prefHeight="133.0" prefWidth="20.0" />
+                                    <JFXSlider fx:id="tailleslider" layoutX="328.0" layoutY="33.0" max="300.0" onMouseClicked="#sliderValuetaille" orientation="VERTICAL" prefHeight="123.0" prefWidth="14.0" />
+                                    <JFXSlider fx:id="temperatureslider" layoutX="592.0" layoutY="33.0" max="45.0" onMouseClicked="#sliderValuetemperature" orientation="VERTICAL" prefHeight="123.0" prefWidth="14.0" value="35.0" />
+                                    <JFXSlider fx:id="pressionslider" layoutX="866.0" layoutY="40.0" onMouseClicked="#sliderValuepression" orientation="VERTICAL" prefHeight="116.0" prefWidth="20.0" />
+                                    <Label layoutX="64.0" layoutY="158.0" prefHeight="21.0" prefWidth="86.0" text="Poids (Kgs)">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="306.0" layoutY="158.0" prefHeight="17.0" prefWidth="87.0" text="Taille ( Cm)">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="558.0" layoutY="155.0" prefHeight="21.0" prefWidth="96.0" text="Temperature">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="806.0" layoutY="158.0" text="Pression Sanguine">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="poidtbx" alignment="CENTER" layoutX="79.0" layoutY="1.0" prefHeight="26.0" prefWidth="35.0" style="-fx-background-color: #0d6834; -fx-background-radius: 360;" text="-" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Label>
+                                    <Label fx:id="tailletbx" alignment="CENTER" layoutX="314.0" layoutY="6.0" prefHeight="26.0" prefWidth="35.0" style="-fx-background-color: #0d6834; -fx-background-radius: 360;" text="-" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Label>
+                                    <Label fx:id="pressiontbx" alignment="CENTER" layoutX="859.0" layoutY="5.0" prefHeight="28.0" prefWidth="35.0" style="-fx-background-color: #0d6834; -fx-background-radius: 360;" text="-" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Label>
+                                    <Label fx:id="temperaturetbx" alignment="CENTER" layoutX="580.0" layoutY="6.0" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0d6834; -fx-background-radius: 360;" text="-" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Observation">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXCheckBox fx:id="dentition" layoutX="591.0" layoutY="39.0" onAction="#observation" text="Dentition" />
+                                    <JFXCheckBox fx:id="communication" layoutX="591.0" layoutY="130.0" onAction="#observation" text="Communication" />
+                                    <JFXCheckBox fx:id="vision" layoutX="322.0" layoutY="130.0" onAction="#observation" text="Vision" />
+                                    <JFXCheckBox fx:id="auditif" layoutX="87.0" layoutY="130.0" onAction="#observation" prefHeight="17.0" prefWidth="96.0" text="Auditif" />
+                                    <JFXCheckBox fx:id="langage" layoutX="322.0" layoutY="39.0" onAction="#observation" text="Langage" />
+                                    <JFXCheckBox fx:id="physique" layoutX="87.0" layoutY="39.0" onAction="#observation" text="Physique" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Allergies">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <JFXCheckBox fx:id="medicament" layoutX="63.0" layoutY="47.0" onAction="#allergie" text="Medicaments">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXCheckBox fx:id="aliment" layoutX="335.0" layoutY="47.0" onAction="#allergie" text="Aliments">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXCheckBox fx:id="autre" layoutX="610.0" layoutY="47.0" onAction="#allergie" prefHeight="17.0" prefWidth="96.0" text="Autres">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Antecedents Mediccaux">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1055.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <JFXCheckBox fx:id="tuberculose" layoutX="269.0" layoutY="50.0" onAction="#antecedent" text="Tuberculose" />
+                                    <JFXCheckBox fx:id="diabete" layoutX="33.0" layoutY="50.0" onAction="#antecedent" text="Diabete" />
+                                    <JFXCheckBox fx:id="cardiaque" layoutX="33.0" layoutY="126.0" onAction="#antecedent" text="Hypertension" />
+                                    <JFXCheckBox fx:id="ortho" layoutX="536.0" layoutY="50.0" onAction="#antecedent" text="Orthopedique" />
+                                    <JFXCheckBox fx:id="autreshis" layoutX="269.0" layoutY="126.0" onAction="#antecedent" text="Autres" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Pieces Jointes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" layoutX="903.0" layoutY="195.0" onAction="#rechercher" prefHeight="41.0" prefWidth="138.0" styleClass="lineare" text="Ajouter ">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <ImageView fx:id="documentA" fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="26.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../images/1600.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="documentB" fitHeight="150.0" fitWidth="200.0" layoutX="343.0" layoutY="26.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../images/1600.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="documentC" fitHeight="150.0" fitWidth="200.0" layoutX="707.0" layoutY="26.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../images/1600.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Conclusion">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1055.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <JFXTextArea fx:id="conclusion" layoutX="51.0" layoutY="29.0" onKeyReleased="#conclusion" prefHeight="118.0" prefWidth="833.0" promptText="Apres Consultation...." scrollTop="2.0" />
+                                    <JFXCheckBox fx:id="oui" layoutX="407.0" layoutY="213.0" onAction="#hospi" text="Oui" />
+                                    <JFXCheckBox fx:id="non" layoutX="518.0" layoutY="213.0" onAction="#hospi" text="Non" />
+                                    <Label layoutX="152.0" layoutY="209.0" prefHeight="26.0" prefWidth="249.0" text="Le patient devrait il etre hospitaliser ?">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                     <effect>
+                        <DropShadow radius="12.225" width="29.9" />
+                     </effect>
+                  </JFXTabPane>
+                  <ImageView fitHeight="126.0" fitWidth="1069.0" layoutX="20.0" layoutY="35.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/osx_folder_template_by_snowgears-daeag0l.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name" layoutX="388.0" layoutY="130.0" prefHeight="19.0" prefWidth="195.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="naiss" layoutX="764.0" layoutY="130.0" prefHeight="19.0" prefWidth="293.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label fx:id="mat" layoutX="140.0" layoutY="131.0" prefHeight="19.0" prefWidth="182.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Pane fx:id="ordonnance" layoutX="41.0" layoutY="892.0" prefHeight="459.0" prefWidth="1045.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="400.0" layoutY="74.0" prefHeight="17.0" prefWidth="129.0" text="Ordonnance">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="231.0" text="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="290.0" text="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="167.0" text="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="432.0" layoutY="166.0" text="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="432.0" layoutY="231.0" text="5">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="432.0" layoutY="290.0" text="6">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="medicament1tbx" focusColor="#17c947" layoutX="121.0" layoutY="159.0" unFocusColor="#17b6bc" />
+                        <JFXTextField fx:id="medicament2tbx" focusColor="#17c947" layoutX="121.0" layoutY="235.0" unFocusColor="#17b6bc" />
+                        <JFXTextField fx:id="medicament3tbx" focusColor="#17c947" layoutX="121.0" layoutY="283.0" unFocusColor="#17b6bc" />
+                        <JFXTextField fx:id="medicament4tbx" focusColor="#17c947" layoutX="506.0" layoutY="172.0" unFocusColor="#17b6bc" />
+                        <JFXTextField fx:id="medicament5tbx" focusColor="#17c947" layoutX="506.0" layoutY="237.0" unFocusColor="#17b6bc" />
+                        <JFXTextField fx:id="medicament6tbx" focusColor="#17c947" layoutX="506.0" layoutY="296.0" unFocusColor="#17b6bc" />
+                        <Label layoutX="62.0" layoutY="84.0" text="   Republique Du Senegal&#10;Un Peuple Un But Une Foi">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ordonnancedakarle" layoutX="439.0" layoutY="30.0" text="Dakar ,Le " />
+                        <Label layoutX="613.0" layoutY="63.0" text="Ministere De La Sante Et De La Prevention Medicale&#10;                               Hospital De Grand Yoff&#10;">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="62.0" fitWidth="168.0" layoutX="29.0" layoutY="18.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/senegal.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="48.0" fitWidth="204.0" layoutX="777.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sante.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Pardr" layoutX="749.0" layoutY="362.0" text="Par Dr.  " />
+                        <Label fx:id="prevutbx" layoutX="143.0" layoutY="424.0" onMouseClicked="#setdaterv" prefHeight="21.0" prefWidth="662.0" text="Votre prochain rendez-vous est prevu pour le ..">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Pane layoutX="714.0" layoutY="402.0" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="846.0" prefHeight="51.0" prefWidth="1047.0" styleClass="lineare" text="             ORDONNANCE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="44.0" layoutY="2090.0" prefHeight="50.0" prefWidth="995.0" style="-fx-border-color: BLACK;" />
+                  <Pane layoutX="30.0" layoutY="515.0" prefHeight="255.0" prefWidth="1053.0" style="-fx-background-color: white;">
+                     <children>
+                        <Pane layoutX="33.0" layoutY="21.0" prefHeight="0.0" prefWidth="987.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="13.0" prefHeight="28.0" prefWidth="190.0" styleClass="lineare" text="Prochain Rendez-Vous" />
+                              <JFXDatePicker fx:id="daterv" layoutX="342.0" layoutY="85.0" onMouseExited="#setdaterv" prefHeight="28.0" prefWidth="404.0" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Pane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="39.0" onAction="#chercher" prefHeight="34.0" prefWidth="132.0" styleClass="authentification" text="Rechercher">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="41.0" layoutY="1424.0" prefHeight="51.0" prefWidth="1004.0" styleClass="lineare" text="FICHE MEDICALE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="469.0" prefHeight="51.0" prefWidth="1058.0" text="             RenDez-Vous">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="champtbx" alignment="CENTER" focusColor="#0afc8b" layoutX="435.0" layoutY="56.0" prefHeight="25.0" prefWidth="409.0" promptText="Entrer Le Matricule" unFocusColor="#0dc7e8" />
+                  <Label fx:id="image" layoutX="64.0" layoutY="81.0" />
+                  <Label fx:id="myphoto" layoutX="50.0" layoutY="42.0" prefHeight="68.0" prefWidth="99.0" />
+                  <Label layoutX="64.0" layoutY="129.0" text="Matricule :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="129.0" text="Nom :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="601.0" layoutY="131.0" text="Date De Naiss :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="fiche" layoutX="12.0" layoutY="1492.0" prefHeight="628.0" prefWidth="1038.0" style="-fx-background-color: white; -fx-border-color: #1abc9c; -fx-border-radius: 40;">
+                     <children>
+                        <Pane layoutX="18.0" layoutY="14.0" prefHeight="68.0" prefWidth="587.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="7.0" layoutX="14.0" lineSpacing="5.0" prefHeight="28.0" prefWidth="565.0" text="Republique Du Senegal">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="27.0" text="Ministere De La Sante Et De L 'Action Sociale">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="226.0" layoutY="46.0" prefHeight="17.0" prefWidth="169.0" text="Hospital De Grand-Yoff" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="594.0" layoutY="14.0" prefHeight="68.0" prefWidth="396.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="26.0" text="MATRICULE" />
+                              <JFXTextField fx:id="matriculetbx" editable="false" layoutX="95.0" layoutY="22.0" onKeyReleased="#releasematricule" promptText="MATRICULE" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="7.0" layoutY="82.0" prefHeight="25.0" prefWidth="982.0" stylesheets="@style.css">
+                           <children>
+                              <Label layoutX="395.0" text="INFORMATION DU PATIENT">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="7.0" layoutY="112.0" prefHeight="59.0" prefWidth="454.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="67.0" layoutY="6.0" text="NOM" />
+                              <Label layoutX="263.0" layoutY="6.0" text="PRENOM" />
+                              <JFXTextField fx:id="nomtbx" alignment="CENTER" editable="false" layoutX="14.0" layoutY="23.0" />
+                              <JFXTextField fx:id="prenomtbx" alignment="CENTER" editable="false" layoutX="220.0" layoutY="25.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="472.0" layoutY="112.0" prefHeight="59.0" prefWidth="169.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="21.0" text="SEXE" />
+                              <JFXCheckBox fx:id="masculintbx" layoutX="60.0" layoutY="6.0" text="MASCULIN" />
+                              <JFXCheckBox fx:id="feminintbx" layoutX="60.0" layoutY="37.0" text="FEMININ" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="651.0" layoutY="112.0" prefHeight="59.0" prefWidth="339.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" text="DATE DE NAISSANCE" />
+                              <JFXTextField fx:id="datetbx" editable="false" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="251.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="8.0" layoutY="180.0" prefHeight="50.0" prefWidth="454.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="59.0" layoutY="5.0" text="ADRESSE" />
+                              <JFXTextField fx:id="adressetbx" alignment="CENTER" editable="false" layoutX="37.0" layoutY="13.0" prefHeight="25.0" prefWidth="323.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="472.0" layoutY="180.0" prefHeight="50.0" prefWidth="169.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="57.0" layoutY="6.0" text="E-MAIL" />
+                              <JFXTextField fx:id="mailtbx" alignment="CENTER" editable="false" layoutX="11.0" layoutY="20.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="651.0" layoutY="180.0" prefHeight="50.0" prefWidth="339.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="54.0" layoutY="6.0" text="TELEPHONE" />
+                              <JFXTextField fx:id="telephonetbx" alignment="CENTER" editable="false" layoutX="26.0" layoutY="20.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="8.0" layoutY="261.0" prefHeight="88.0" prefWidth="269.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="6.0" layoutY="11.0" text="ALLERGIES" />
+                              <JFXCheckBox fx:id="cmedicament" layoutX="70.0" layoutY="6.0" text="MEDICAMENTS">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="calimentaire" layoutX="70.0" layoutY="36.0" text="ALIMENTAIRES">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="cautres" layoutX="70.0" layoutY="66.0" text="AUTRES">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXTextField layoutX="169.0" layoutY="-4.0" prefHeight="25.0" prefWidth="93.0" />
+                              <JFXTextField layoutX="169.0" layoutY="24.0" prefHeight="25.0" prefWidth="96.0" />
+                              <JFXTextField layoutX="168.0" layoutY="54.0" prefHeight="25.0" prefWidth="96.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="285.0" layoutY="262.0" prefHeight="88.0" prefWidth="709.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="3.0" layoutY="2.0" text="HISTORIQUE MEDICAL" />
+                              <JFXCheckBox fx:id="cdiabete" layoutX="7.0" layoutY="25.0" text="DIABETE">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="ccardiaque" layoutX="7.0" layoutY="45.0" text="CARDIAQUE">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="ctubercolose" layoutX="7.0" layoutY="66.0" text="TUBERCULOSE">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="cortho" layoutX="102.0" layoutY="24.0" text="ORTHOPEDIQUE">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="caudiovision" layoutX="102.0" layoutY="44.0" text="AUDIO-VISUAL">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="cautreshisto" layoutX="102.0" layoutY="65.0" text="AUTRES">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <Pane layoutX="204.0" layoutY="4.0" prefHeight="78.0" prefWidth="501.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="6.0" text="RESTRICTIONS MEDICALES">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="59.0" text="RESTRICTIONS ALIMENTAIRES">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXCheckBox layoutX="147.0" layoutY="6.0" text="OUI">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXCheckBox layoutX="198.0" layoutY="6.0" text="NON">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXCheckBox layoutX="147.0" layoutY="59.0" text="OUI">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXCheckBox layoutX="200.0" layoutY="59.0" text="NON">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </JFXCheckBox>
+                                    <JFXTextField layoutX="270.0" layoutY="1.0" prefHeight="25.0" prefWidth="220.0" />
+                                    <JFXTextField layoutX="268.0" layoutY="47.0" prefHeight="25.0" prefWidth="220.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="7.0" layoutY="360.0" prefHeight="88.0" prefWidth="476.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutY="6.0" text="EXAMEN PHYSIQUE" />
+                              <JFXTextField fx:id="ctaille" editable="false" labelFloat="true" layoutX="120.0" layoutY="11.0" promptText="TAILLE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="cpoid" editable="false" labelFloat="true" layoutX="120.0" layoutY="56.0" promptText="POIDS">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="ctemp" editable="false" labelFloat="true" layoutX="309.0" layoutY="56.0" promptText="REMPERATURE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="cpression" editable="false" labelFloat="true" layoutX="309.0" layoutY="16.0" promptText="PRESSION ARTERIELLE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="255.0" layoutY="6.0" text="cm" />
+                              <Label layoutX="255.0" layoutY="44.0" text="Kgs" />
+                              <Label layoutX="446.0" layoutY="44.0" text="C°" />
+                              <Label layoutX="441.0" layoutY="15.0" text="mbr" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="494.0" layoutY="359.0" prefHeight="201.0" prefWidth="501.0" style="-fx-border-color: black;">
+                           <children>
+                              <Label layoutX="189.0" layoutY="13.0" text="APPARENCE PHYSIQUE" />
+                              <JFXCheckBox fx:id="clangage" layoutX="131.0" layoutY="44.0" text="OUI" />
+                              <Label layoutX="52.0" layoutY="44.0" text="Langage" />
+                              <Label layoutX="52.0" layoutY="82.0" text="Communication" />
+                              <Label layoutX="304.0" layoutY="49.0" text="Physique" />
+                              <JFXCheckBox fx:id="ccommunication" layoutX="132.0" layoutY="79.0" text="OUI" />
+                              <Label layoutX="304.0" layoutY="82.0" text="Vision" />
+                              <JFXCheckBox fx:id="cphysique" layoutX="375.0" layoutY="50.0" text="OUI" />
+                              <JFXCheckBox fx:id="cvision" layoutX="375.0" layoutY="83.0" text="OUI" />
+                              <JFXCheckBox fx:id="cautres" layoutX="133.0" layoutY="118.0" text="OUI" />
+                              <Label layoutX="50.0" layoutY="118.0" text="Autres" />
+                              <JFXCheckBox fx:id="cauditif" layoutX="375.0" layoutY="127.0" text="Oui" />
+                              <Label layoutX="304.0" layoutY="127.0" text="Audition" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="455.0" prefHeight="105.0" prefWidth="476.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" text="Conclusion" />
+                              <JFXTextArea fx:id="cconclusion" layoutX="26.0" layoutY="23.0" prefHeight="68.0" prefWidth="256.0" />
+                              <Label layoutX="353.0" layoutY="6.0" text="Hospitaliser" />
+                              <JFXCheckBox fx:id="ouih" layoutX="353.0" layoutY="36.0" text="Oui" />
+                              <JFXCheckBox fx:id="nonh" layoutX="353.0" layoutY="74.0" text="Non" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="11.0" layoutY="566.0" prefHeight="49.0" prefWidth="992.0" style="-fx-border-color: BLACK;">
+                           <children>
+                              <Label fx:id="datelabel" layoutX="23.0" layoutY="12.0" text="Dakr Le" />
+                              <Label fx:id="parlabel" layoutX="616.0" layoutY="12.0" text="PAR Mr/Mme" />
+                              <Label fx:id="ordonnanceid" layoutX="432.0" layoutY="16.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="20.0" prefHeight="17.0" prefWidth="235.0" text="A conserver par le patient ">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <JFXButton layoutX="331.0" layoutY="2154.0" onAction="#print" styleClass="lineare" text="Imprimer le fiche de consultation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="newbtn" layoutX="223.0" layoutY="118.0" onAction="#nouvelle" styleClass="authentification" text="Nouvelle consultation" />
+      <JFXButton fx:id="listebtn" layoutX="456.0" layoutY="118.0" onAction="#liste" styleClass="authentification" text="Liste des consultations" />
+      <Pane layoutX="-1.0" prefHeight="81.0" prefWidth="1366.0" styleClass="lineare">
+         <children>
+            <Circle fx:id="cerccle" fill="DODGERBLUE" layoutX="1006.0" layoutY="41.0" radius="34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Separator layoutX="211.0" layoutY="1.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="20.0" />
+            <Label fx:id="today" layoutX="231.0" layoutY="31.0" prefHeight="26.0" prefWidth="156.0" text="Label" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="13.0" layoutY="32.0" prefHeight="26.0" prefWidth="156.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1218.0" layoutY="22.0" onMouseClicked="#deconnecter" prefHeight="42.0" prefWidth="141.0" styleClass="authentification" text="Deconnecter" textFill="#71ad97">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="prenomlabel" layoutX="1089.0" layoutY="24.0" text="Docteur">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1106.0" layoutY="50.0" prefHeight="17.0" prefWidth="112.0" text="Medecin" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
